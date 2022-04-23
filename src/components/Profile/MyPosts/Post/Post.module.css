@@ -1,0 +1,37 @@
+.item {
+  margin: 10px;
+  color: yellowgreen;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-shadow: 0px 0px 3px rgb(0, 0, 0);
+}
+.item span{
+}
+.item span:hover{
+  text-shadow: 0px 0px 3px #fff;
+  cursor: pointer;
+}
+.item img {
+  min-width: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 5px;
+  margin-right: 10px;
+  border: 2px solid rgb(206, 236, 135);
+  background: rgba(206, 236, 135, 0.425);
+}
+.userMessage{
+  display: flex;
+  justify-content: space-between;
+  /* flex-grow: 0; */
+  align-items: center;
+  max-width:300px;
+}
+.userMessage p{
+max-width: 300px;
+background: #000;
+/* flex-grow: 0; */
+}

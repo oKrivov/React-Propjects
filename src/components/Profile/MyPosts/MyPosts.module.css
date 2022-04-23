@@ -1,0 +1,11 @@
+h3 {
+    margin: 10px;
+}
+.newPost{
+  margin: 10px;
+}
+
+textarea{
+  width: 250px;
+  resize: none;
+}
