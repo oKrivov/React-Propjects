@@ -1,3 +1,8 @@
+const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+const ADD_POST = 'ADD-POST';
+const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
+const ADD_MESSAGE= 'ADD-MESSAGE';
+
 const store = {
   _state: {
     profilePage: {
@@ -82,42 +87,6 @@ const store = {
     this._callSubscriber = observer;
   },
 
-
-  /*
-  addPost() {
-    const newPost = {
-      id: 3,
-      message: this._state.profilePage.newPostText,
-      likesCount: 0,
-      url: "https://cdn-icons-png.flaticon.com/512/1864/1864589.png",
-    };
-
-    this._state.profilePage.posts.push(newPost);
-    this._state.profilePage.newPostText = "";
-    this._callSubscriber(this._state);
-  },
-  updateNewPostText(newText) {
-    this._state.profilePage.newPostText = newText;
-    this._callSubscriber(this._state);
-  },
-  addMessage() {
-    const newMessage = {
-      id: 4,
-      message: this._state.dialogsPage.newMessageText,
-    };
-
-    this._state.dialogsPage.messages.push(newMessage);
-    this._state.dialogsPage.newMessageText = "";
-    this._callSubscriber(this._state);
-  },
-  updateNewMessage(newMs) {
-    this._state.dialogsPage.newMessageText = newMs;
-    this._callSubscriber(this._state);
-  },
-
-  */
-
-
   dispatch(action) {
     if (action.type === "ADD-POST") {
       const newPost = {
@@ -148,6 +117,19 @@ const store = {
     }
   },
 };
+
+export const addPostActionCreator = () => {
+  return { type: ADD_POST};
+}
+export const updateNewPostTextActionCreator = (text) => {
+  return { type: UPDATE_NEW_POST_TEXT, newText: text};
+}
+export const addMessageActionCreator = () => {
+  return { type: ADD_MESSAGE};
+}
+export const updateNewMessageTextActionCreator = (text) => {
+  return { type: UPDATE_NEW_MESSAGE_TEXT, newMs: text};
+}
 
 export default store;
 window.store = store;
